@@ -12,7 +12,7 @@ import argparse
 class Gen2DLandmarks(object):
     def __init__(self) -> None:
         super().__init__()
-        self.fa_func = face_alignment.FaceAlignment(face_alignment.LandmarksType._2D, flip_input=False)
+        self.fa_func = face_alignment.FaceAlignment(face_alignment.LandmarksType.TWO_D, flip_input=False)
         
         
     def main_process(self, img_dir):

@@ -93,7 +93,7 @@ def align_img(img, lm, lm3D, mask=None, target_size=1024., rescale_factor=466.28
     #lm_new = lm*1024.0/512.0
     #mask_new=None
     # img.save("/home/koki/Projects/Deep3DFaceRecon_pytorch/checkpoints/pretrained/results/iphone/epoch_20_000000/img_new.jpg")    
-    trans_params = np.array([w0, h0, s, t[0], t[1]])
+    trans_params = np.array([w0, h0, s, t[0].item(), t[1].item()])
     lm_new *= 224/1024.0
     img_new_low = img_new.resize((224, 224), resample=Image.LANCZOS)
 
