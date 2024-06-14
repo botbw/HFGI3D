@@ -425,8 +425,8 @@ if __name__ == '__main__':
 	
 		mask = mask*contour
 		#mask = cv2.resize(mask,(512,512))
-		mask = cv2.GaussianBlur(mask, (21, 21), 0) 
-	
+		mask = cv2.GaussianBlur(mask, (21, 21), 0).astype(np.uint8)
+		
 		imageio.imwrite(outputdir+'eroded_mask_{}.png'.format(i),mask)
 
 	triplane_folder =depth_folder+'/%s_hairdifference/500_output/'%(name)  
